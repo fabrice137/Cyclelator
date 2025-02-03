@@ -1,0 +1,70 @@
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 50px;
+}
+
+.fx-row {
+    display: flex;
+    flex-direction: row;
+}
+.fx-col{
+    display: flex;
+    flex-direction: column;
+}
+.fx-cntr{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fx-sb{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.bothRows{
+    /* border: 2px solid #ccc; */
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    /* background-color: blue; */
+}
+
+.firstRow{
+    /* border: 5px solid rgb(160, 10, 10); */
+    border-radius: 10px;
+    width: 24.5em;
+}
+
+input, button {
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+#calendar {
+    /* border: 5px solid rgb(160, 10, 10); */
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    max-width: 450px;
+    margin: 20px auto;
+}
+.day {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+.fertile {
+    background-color: #ffcccb;
+}
+.ovulation {
+    background-color: #ff9999;
+}
