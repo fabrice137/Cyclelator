@@ -33,7 +33,7 @@ body {
 }
 
 .firstRow{
-    /* border: 5px solid rgb(160, 10, 10); */
+    border: 3px solid rgb(160, 10, 10);
     border-radius: 10px;
     width: 22em;
 }
@@ -44,7 +44,7 @@ input, button {
     font-size: 16px;
 }
 #calendar {
-    /* border: 5px solid rgb(160, 10, 10); */
+    border: 3px solid rgb(160, 10, 10);
     border-radius: 10px;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
