@@ -27,7 +27,10 @@ body {
 .bothRows{
     /* border: 2px solid #ccc; */
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+    align-items: center;
+    align-content: center;
     margin: 20px;
     /* background-color: blue; */
 }
@@ -41,7 +44,8 @@ body {
 input, button {
     margin: 10px;
     padding: 5px;
-    font-size: 16px;
+    font-size: 14px;
+    font-weight: bold;
 }
 #calendar {
     border: 3px solid rgb(160, 10, 10);
