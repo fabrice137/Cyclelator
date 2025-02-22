@@ -5,6 +5,8 @@ function generateCalendar() {
         return;
     }
     
+    let logs = "";
+
     const startDate = new Date(cycleStart);
     const ovulationDay = new Date(startDate);
     ovulationDay.setDate(startDate.getDate() + 14);
@@ -15,11 +17,18 @@ function generateCalendar() {
     const calendarDiv = document.getElementById("calendar");
     calendarDiv.innerHTML = "";
     
-    let firstDayOfWeek = new Date(startDate);
-    firstDayOfWeek.setDate(1);
-    let startDay = firstDayOfWeek.getDay();
+
+    for (let i = 0; i < 7; i++) {
+        let dayBox = document.createElement("div");
+        dayBox.classList.add("dayHeader");
+        dayBox.innerText = "SMTWTFS"[i];
+        
+        calendarDiv.appendChild(dayBox);
+    }
+
+    let emptyBoxDays = daysToPreviousSunday(startDate);
     
-    for (let i = 0; i < startDay; i++) {
+    for (let i = 0; i < emptyBoxDays; i++) {
         let emptyBox = document.createElement("div");
         emptyBox.classList.add("day", "empty");
         calendarDiv.appendChild(emptyBox);
@@ -41,4 +50,14 @@ function generateCalendar() {
         
         calendarDiv.appendChild(dayBox);
     }
+    
+    // if(logs.length > 0) {
+    //     const logDiv = document.getElementById("logs");
+    //     logDiv.innerText = logs;
+    // }
+}
+
+function daysToPreviousSunday(date) {
+    const dayOfWeek = date.getDay();
+    return dayOfWeek === 0 ? 0 : dayOfWeek;
 }
